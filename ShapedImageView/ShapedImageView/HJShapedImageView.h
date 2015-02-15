@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShapedImageView : UIView
+@interface HJShapedImageView : UIView
 
 @property (nonatomic, strong) UIImage *image;
 

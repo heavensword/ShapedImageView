@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 Sword. All rights reserved.
 //
 
-#import "ShapedImageView.h"
+#import "HJShapedImageView.h"
 
-@interface ShapedImageView()
+@interface HJShapedImageView()
 {
     CALayer      *_contentLayer;
     CAShapeLayer *_maskLayer;
 }
 @end
 
-@implementation ShapedImageView
+@implementation HJShapedImageView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

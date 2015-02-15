@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ShapedImageView.h"
+#import "HJShapedImageView.h"
 
 @interface ViewController ()
 
@@ -21,7 +21,7 @@
     
     CGRect frame = CGRectMake(110, 100, 100, 150);
 
-    ShapedImageView *shapedImageView = [[ShapedImageView alloc] initWithFrame:frame];
+    HJShapedImageView *shapedImageView = [[HJShapedImageView alloc] initWithFrame:frame];
     shapedImageView.image = [UIImage imageNamed:@"scenery.jpg"];
     [self.view addSubview:shapedImageView];
     

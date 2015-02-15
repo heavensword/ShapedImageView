@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5055DC381A18B04D00024066 /* ShapedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055DC371A18B04D00024066 /* ShapedImageView.m */; };
+		5055DC381A18B04D00024066 /* HJShapedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055DC371A18B04D00024066 /* HJShapedImageView.m */; };
 		5055DC3C1A18BEA500024066 /* gray_bubble_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5055DC3A1A18BEA500024066 /* gray_bubble_right@2x.png */; };
 		5055DC3D1A18BEA500024066 /* scenery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5055DC3B1A18BEA500024066 /* scenery.jpg */; };
 		50B248B81A17A97300B9D12C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B248B71A17A97300B9D12C /* main.m */; };
@@ -30,8 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5055DC361A18B04D00024066 /* ShapedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapedImageView.h; sourceTree = "<group>"; };
-		5055DC371A18B04D00024066 /* ShapedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapedImageView.m; sourceTree = "<group>"; };
+		5055DC361A18B04D00024066 /* HJShapedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJShapedImageView.h; sourceTree = "<group>"; };
+		5055DC371A18B04D00024066 /* HJShapedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJShapedImageView.m; sourceTree = "<group>"; };
 		5055DC3A1A18BEA500024066 /* gray_bubble_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray_bubble_right@2x.png"; sourceTree = "<group>"; };
 		5055DC3B1A18BEA500024066 /* scenery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scenery.jpg; sourceTree = "<group>"; };
 		50B248B21A17A97300B9D12C /* ShapedImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapedImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,8 +106,8 @@
 				50B248C21A17A97300B9D12C /* Images.xcassets */,
 				50B248C41A17A97300B9D12C /* LaunchScreen.xib */,
 				50B248B51A17A97300B9D12C /* Supporting Files */,
-				5055DC361A18B04D00024066 /* ShapedImageView.h */,
-				5055DC371A18B04D00024066 /* ShapedImageView.m */,
+				5055DC361A18B04D00024066 /* HJShapedImageView.h */,
+				5055DC371A18B04D00024066 /* HJShapedImageView.m */,
 			);
 			path = ShapedImageView;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 				50B248BE1A17A97300B9D12C /* ViewController.m in Sources */,
 				50B248BB1A17A97300B9D12C /* AppDelegate.m in Sources */,
 				50B248B81A17A97300B9D12C /* main.m in Sources */,
-				5055DC381A18B04D00024066 /* ShapedImageView.m in Sources */,
+				5055DC381A18B04D00024066 /* HJShapedImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
