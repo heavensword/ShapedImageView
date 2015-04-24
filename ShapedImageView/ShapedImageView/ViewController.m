@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     
-    CGRect frame = CGRectMake(110, 100, 100, 150);
+    CGRect frame = CGRectMake((CGRectGetWidth(self.view.bounds) - 100) / 2, (CGRectGetHeight(self.view.bounds) - 150) / 2, 100, 150);
 
     HJShapedImageView *shapedImageView = [[HJShapedImageView alloc] initWithFrame:frame];
     shapedImageView.image = [UIImage imageNamed:@"scenery.jpg"];
