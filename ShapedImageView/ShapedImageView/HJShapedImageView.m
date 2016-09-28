@@ -30,24 +30,34 @@
 - (void)setup
 {
     //construct your path
-    //CGMutablePathRef path = CGPathCreateMutable();
-    //CGPoint origin = self.bounds.origin;
-    //CGFloat radius = CGRectGetWidth(self.bounds) / 2;
-    //CGPathMoveToPoint(path, NULL, origin.x, origin.y + 2 *radius);
-    //CGPathMoveToPoint(path, NULL, origin.x, origin.y + radius);
-    //
-    //CGPathAddArcToPoint(path, NULL, origin.x, origin.y, origin.x + radius, origin.y, radius);
-    //CGPathAddArcToPoint(path, NULL, origin.x + 2 * radius, origin.y, origin.x + 2 * radius, origin.y + radius, radius);
-    //CGPathAddArcToPoint(path, NULL, origin.x + 2 * radius, origin.y + 2 * radius, origin.x + radius, origin.y + 2  * radius, radius);
-    //CGPathAddLineToPoint(path, NULL, origin.x, origin.y + 2 * radius);
-    //
+    CGMutablePathRef bubblePath = CGPathCreateMutable();
+    CGPoint origin = self.bounds.origin;
+    CGFloat radius = CGRectGetWidth(self.bounds) / 2;
+    CGPathMoveToPoint(bubblePath, NULL, origin.x, origin.y + 2 *radius);
+    CGPathMoveToPoint(bubblePath, NULL, origin.x, origin.y + radius);
+    
+    CGPathAddArcToPoint(bubblePath, NULL, origin.x, origin.y, origin.x + radius, origin.y, radius);
+    CGPathAddArcToPoint(bubblePath, NULL, origin.x + 2 * radius, origin.y, origin.x + 2 * radius, origin.y + radius, radius);
+    CGPathAddArcToPoint(bubblePath, NULL, origin.x + 2 * radius, origin.y + 2 * radius, origin.x + radius, origin.y + 2  * radius, radius);
+    CGPathAddLineToPoint(bubblePath, NULL, origin.x, origin.y + 2 * radius);
+    
     _maskLayer = [CAShapeLayer layer];
     _maskLayer.fillColor = [UIColor blackColor].CGColor;
     _maskLayer.strokeColor = [UIColor clearColor].CGColor;
     _maskLayer.frame = self.bounds;
     _maskLayer.contentsCenter = CGRectMake(0.5, 0.5, 0.1, 0.1);
-    _maskLayer.contentsScale = [UIScreen mainScreen].scale;                 //非常关键设置自动拉伸的效果且不变形
-    _maskLayer.contents = (id)[UIImage imageNamed:@"gray_bubble_right@2x.png"].CGImage;
+    
+    /*!
+     * 非常关键设置自动拉伸的效果且不变形
+     */
+    _maskLayer.contentsScale = [UIScreen mainScreen].scale;
+    /*!
+     * 可以通过conents或path来设置mask，效果不一样
+     */
+//    _maskLayer.contents = (id)[UIImage imageNamed:@"gray_bubble_right@2x.png"].CGImage;
+    
+    _maskLayer.path = bubblePath;
+    CGPathRelease(bubblePath);
     
     _contentLayer = [CALayer layer];
     _contentLayer.mask = _maskLayer;
